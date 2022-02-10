@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" styleClass="signup" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignupController">
+   <children>
+      <Label layoutX="188.0" layoutY="81.0" prefHeight="18.0" prefWidth="102.0" styleClass="signup--title" text="Signup" />
+      <ImageView fitHeight="82.0" fitWidth="95.0" layoutX="300.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/signup/signup_icon.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="signup_user" layoutX="82.0" layoutY="181.0" prefHeight="40.0" prefWidth="179.0" promptText="Username" styleClass="signup--field" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="27.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/signup/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="316.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/signup/lock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="27.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/signup/email.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="signup_email" layoutX="82.0" layoutY="254.0" prefHeight="40.0" prefWidth="179.0" promptText="Email" styleClass="signup--field" />
+      <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="313.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/signup/phone.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="signup_phone" layoutX="369.0" layoutY="254.0" prefHeight="40.0" prefWidth="179.0" promptText="Phone" styleClass="signup--field" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="30.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/signup/gender.jpg" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="rbtn1" layoutX="82.0" layoutY="338.0" mnemonicParsing="false" selected="true" style="-fx-focus-traversable: false;" text="Male">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbtn2" layoutX="172.0" layoutY="338.0" mnemonicParsing="false" style="-fx-focus-traversable: false;" text="Female" toggleGroup="$gender">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="signup_btn" layoutX="210.0" layoutY="403.0" mnemonicParsing="false" onAction="#onClickSignup" prefHeight="40.0" prefWidth="179.0" styleClass="signup--btn" text="Sign Up" />
+      <Label layoutX="190.0" layoutY="492.0" prefHeight="18.0" prefWidth="218.0" styleClass="signup--text" text="Already Have An Account?" />
+      <Button fx:id="signup_change" layoutX="210.0" layoutY="527.0" mnemonicParsing="false" onAction="#onClickChange" prefHeight="40.0" prefWidth="179.0" styleClass="signup--btn--change" text="Log In Here" />
+      <PasswordField fx:id="signup_pass" layoutX="369.0" layoutY="181.0" prefHeight="40.0" prefWidth="171.0" promptText="Password" styleClass="signup--field" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,146 @@
+
+/* Login Page */
+.login{
+	-fx-background-color: white;
+}
+
+.login--title{
+	-fx-text-fill: red;
+	-fx-font: 30px "Arial bold";
+	-fx-alignment: center;
+}
+
+.login--field{
+	-fx-background-color: rgba(0, 0, 0, 0.05);
+	-fx-text-fill: black;
+	-fx-font: 17px "Arial";
+	-fx-focus-traversable: false;
+}
+
+.login--btn{
+	-fx-background-color: rgba(254, 44, 85, 1.0);
+	-fx-text-fill: white;
+	-fx-font: 17px "Arial";
+	-fx-background-radius: 20px;
+}
+
+.login--btn:hover{
+	-fx-background-color: rgb(228, 23, 64);
+}
+
+.login--text{
+	-fx-text-fill: red;
+	-fx-font: 15px "Arial";
+	-fx-alignment: center;
+}
+
+.login--btn--change{
+	-fx-background-color: rgba(0, 0, 0, 0.05);
+	-fx-border-color: rgba(254, 44, 85, 1.0);
+	-fx-text-fill: rgba(0, 0, 0, 0.8);
+	-fx-font: 17px "Arial";
+	-fx-background-radius: 20px;
+	-fx-border-radius: 20px;
+}
+
+.login--btn--change:hover{
+	-fx-background-color: rgba(255, 227, 233, 0.623);
+}
+
+
+
+
+/* Sign Up */
+
+.signup{
+	-fx-background-color: white;
+}
+
+.signup--title{
+	-fx-text-fill: red;
+	-fx-font: 30px "Arial bold";
+	-fx-alignment: center;
+}
+
+.signup--field{
+	-fx-background-color: rgba(0, 0, 0, 0.05);
+	-fx-text-fill: black;
+	-fx-font: 17px "Arial";
+	-fx-focus-traversable: false;
+}
+
+.signup--btn{
+	-fx-background-color: rgba(254, 44, 85, 1.0);
+	-fx-text-fill: white;
+	-fx-font: 17px "Arial";
+	-fx-background-radius: 20px;
+}
+
+.signup--btn:hover{
+	-fx-background-color: rgb(228, 23, 64);
+}
+
+.signup--text{
+	-fx-text-fill: red;
+	-fx-font: 15px "Arial";
+	-fx-alignment: center;
+}
+
+.signup--btn--change{
+	-fx-background-color: rgba(0, 0, 0, 0.05);
+	-fx-border-color: rgba(254, 44, 85, 1.0);
+	-fx-text-fill: rgba(0, 0, 0, 0.8);
+	-fx-font: 17px "Arial";
+	-fx-background-radius: 20px;
+	-fx-border-radius: 20px;
+}
+
+.signup--btn--change:hover{
+	-fx-background-color: rgba(255, 227, 233, 0.623);
+}
+
+
+/* Home */
+
+.sidebar{
+	-fx-background-color: rgba(254, 44, 85, 0.6);
+}
+
+
+.home--friends{
+	-fx-background-color: rgba(255, 227, 233, 0.8);
+}
+
+.home--icon:hover{
+	-fx-background-color: rgba(255, 255, 255, 0.4);
+}
+
+.hbox:hover {
+    -fx-background-color: #f8ecc2;
+}
+
+.child--avatar{
+	-fx-border-radius: 100%;
+	-fx-background-radius: 100%;
+}
+
+.search{
+	-fx-background-color: rgba(0, 0, 0, 0.07);
+	-fx-focus-traversable: false;
+	-fx-text-fill: black;
+	-fx-font: 17px "Arial";
+	-fx-border-color: white;
+}
+
+.home--main{
+	-fx-background-color: rgba(255, 255, 255, 0.02);
+}
+
+.home--chat{
+	-fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home--div{
+	-fx-border-width: 0.2px;
+	-fx-border-color: rgba(0, 0, 0, 0.3)
+}

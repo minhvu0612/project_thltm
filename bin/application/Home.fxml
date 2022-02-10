@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <children>
+      <HBox prefHeight="600.0" prefWidth="350.0">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="70.0" styleClass="sidebar">
+               <children>
+                  <VBox fx:id="sidebar" alignment="CENTER" prefHeight="500.0" prefWidth="70.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <VBox fx:id="sidebar_chat" alignment="CENTER" onMouseClicked="#onClickMess" prefHeight="100.0" prefWidth="70.0" styleClass="home--icon">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseEntered="#onER1" onMouseMoved="#onMV1" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/image/home/2121954.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="sidebar_group" alignment="CENTER" onMouseClicked="#onClickGroupChat" prefHeight="100.0" prefWidth="70.0" styleClass="home--icon">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/image/home/681443.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="sidebar_friend" alignment="CENTER" onMouseClicked="#onClickFriends" prefHeight="100.0" prefWidth="70.0" styleClass="home--icon">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/image/home/4175032.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="sidebar_setting" alignment="CENTER" onMouseClicked="#onClickSetting" prefHeight="100.0" prefWidth="70.0" styleClass="home--icon">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/image/home/2040504.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="50.0" top="50.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="sidebar_logout" alignment="CENTER" onMouseClicked="#onClickLogout" prefHeight="100.0" prefWidth="70.0" styleClass="home--icon">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="home--icon">
+                           <image>
+                              <Image url="@../../../assets/image/home/126467.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <VBox prefHeight="600.0" prefWidth="280.0" styleClass="home--friends">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="280.0">
+                     <children>
+                        <TextField fx:id="search_content" maxHeight="40.0" maxWidth="200.0" minWidth="200.0" prefHeight="40.0" prefWidth="200.0" promptText="Search ..." styleClass="search" />
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#onClickSearch" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/image/home/search.jpg" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="532.0" prefWidth="280.0">
+                     <content>
+                        <VBox fx:id="list_user" prefHeight="529.0" prefWidth="266.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox layoutX="350.0" prefHeight="600.0" prefWidth="550.0" styleClass="home--main">
+         <children>
+            <HBox fx:id="user_chat_infor" prefHeight="70.0" prefWidth="550.0" styleClass="home--div" />
+            <ScrollPane prefHeight="460.0" prefWidth="550.0">
+               <content>
+                  <VBox fx:id="chat_pane" prefHeight="452.0" prefWidth="528.0" />
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="200.0" styleClass="home--div">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onClickImg" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/image/home/159716.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onClickFile" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/image/home/2911213.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onClickVideo" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/image/home/3024584.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="send_mes" prefHeight="35.0" prefWidth="320.0" promptText="Enter a message" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onClickSendMes" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/image/home/126475.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

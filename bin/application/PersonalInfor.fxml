@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PersonalInforController">
+   <children>
+      <ImageView fx:id="avatar" fitHeight="202.0" fitWidth="204.0" layoutX="25.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="username" layoutX="451.0" layoutY="128.0" prefHeight="27.0" prefWidth="235.0" textFill="#fe2c55">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="283.0" layoutY="128.0" prefHeight="35.0" prefWidth="134.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="48.0" prefHeight="18.0" prefWidth="301.0" text="    Personal Information" textFill="#fe2c55">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="232.0" prefHeight="27.0" prefWidth="134.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="gender" layoutX="450.0" layoutY="338.0" prefHeight="27.0" prefWidth="235.0" textFill="#fe2c55">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="phone" layoutX="450.0" layoutY="285.0" prefHeight="27.0" prefWidth="235.0" textFill="#fe2c55">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="email" layoutX="450.0" layoutY="232.0" prefHeight="27.0" prefWidth="235.0" textFill="#fe2c55">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="285.0" prefHeight="27.0" prefWidth="134.0" text="Phone:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="338.0" prefHeight="27.0" prefWidth="134.0" text="Gender:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Line endX="689.5999755859375" endY="171.2928924560547" layoutX="-1.0" layoutY="-9.0" startX="277.6000061035156" startY="171.2928924560547" />
+      <Line endX="689.5999755859375" endY="171.2928924560547" layoutX="-1.0" layoutY="46.0" startX="277.6000061035156" startY="171.2928924560547" />
+      <Line endX="689.5999755859375" endY="171.2928924560547" layoutY="101.0" startX="277.6000061035156" startY="171.2928924560547" />
+      <Line endX="689.5999755859375" endY="171.2928924560547" layoutY="157.0" startX="277.6000061035156" startY="171.2928924560547" />
+      <Line endX="434.0" endY="370.20001220703125" layoutX="9.0" layoutY="1.0" startX="434.0" startY="128.59999084472656" />
+      <Button fx:id="back_btn" layoutX="25.0" layoutY="436.0" mnemonicParsing="false" onAction="#onClickBack" prefHeight="26.0" prefWidth="106.0" styleClass="login--btn--change" stylesheets="@style.css" text="Back" />
+      <Button fx:id="setting_btn" layoutX="542.0" layoutY="437.0" mnemonicParsing="false" onAction="#onClickSetting" prefHeight="26.0" prefWidth="106.0" styleClass="login--btn" stylesheets="@style.css" text="Setting" />
+   </children>
+</AnchorPane>
