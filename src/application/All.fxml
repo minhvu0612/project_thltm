@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AllController">
    <children>
       <HBox prefHeight="600.0" prefWidth="350.0">
          <children>
@@ -32,7 +32,7 @@
                            <children>
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseEntered="#onER1" onMouseMoved="#onMV1" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../assets/image/home/2121954.png" />
+                                    <Image url="@../../assets/image/home/126500.png" />
                                  </image>
                               </ImageView>
                            </children>
@@ -41,7 +41,7 @@
                            <children>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../assets/image/home/681443.png" />
+                                    <Image url="@../../assets/image/home/681494.png" />
                                  </image>
                               </ImageView>
                            </children>

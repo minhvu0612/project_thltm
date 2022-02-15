@@ -10,10 +10,13 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
+	
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			primaryStage.setTitle("Chat Me");
 			primaryStage.setScene(scene);

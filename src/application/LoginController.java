@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import models.users;
 
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -32,7 +33,8 @@ public class LoginController {
 	
 	// query
 	public userQuery userq = new userQuery();
-
+	
+	
 
 	// Event Listener on Button[#login_btn].onAction
 	@FXML

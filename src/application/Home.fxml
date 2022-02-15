@@ -20,6 +20,14 @@
                         <Insets />
                      </opaqueInsets>
                      <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="70.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="avatar_id" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
                         <VBox fx:id="sidebar_chat" alignment="CENTER" onMouseClicked="#onClickMess" prefHeight="100.0" prefWidth="70.0" styleClass="home--icon">
                            <children>
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseEntered="#onER1" onMouseMoved="#onMV1" pickOnBounds="true" preserveRatio="true">
@@ -95,10 +103,10 @@
             </VBox>
          </children>
       </HBox>
-      <VBox layoutX="350.0" prefHeight="600.0" prefWidth="550.0" styleClass="home--main">
+      <VBox fx:id="load_db" layoutX="350.0" onMouseClicked="#onClickLoad" prefHeight="600.0" prefWidth="550.0" styleClass="home--main">
          <children>
             <HBox fx:id="user_chat_infor" prefHeight="70.0" prefWidth="550.0" styleClass="home--div" />
-            <ScrollPane prefHeight="460.0" prefWidth="550.0">
+            <ScrollPane prefHeight="460.0" prefWidth="550.0" style="-fx-box-border: transparent;">
                <content>
                   <VBox fx:id="chat_pane" prefHeight="452.0" prefWidth="528.0" />
                </content>
@@ -130,7 +138,7 @@
                      </HBox.margin>
                   </ImageView>
                   <TextField fx:id="send_mes" prefHeight="35.0" prefWidth="320.0" promptText="Enter a message" />
-                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onClickSendMes" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#onClickMes" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../assets/image/home/126475.png" />
                      </image>

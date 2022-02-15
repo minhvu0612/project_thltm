@@ -122,8 +122,8 @@ void *handle_client(void *arg){
 		}
 		strcpy(cli->name, name);
 		//cli->uid = atoi(&name[i+1]);
-		sprintf(buff_out, "%s has online\n", cli->name);
-		printf("%s", buff_out);
+		//sprintf(buff_out, "%s has online\n", cli->name);
+		//printf("%s", buff_out);
 		//send_message(buff_out, cli->name);
 	}
 	bzero(buff_out, BUFFER_SZ);
@@ -136,27 +136,34 @@ void *handle_client(void *arg){
 		}
 
 		int receive = recv(cli->sockfd, buff_out, BUFFER_SZ, 0);
+		int check = 0;
 		if (receive > 0){
 			if(strlen(buff_out) > 0){
 				int j;
 		    for (j = 0; j < strlen(buff_out); j++){
 			    if (buff_out[j] == '-'){
+			    	check = 1;
 				    break;
 			    }
 		    }
-		    char mess[BUFFER_SZ];
-		    char name_send[BUFFER_SZ];
-		    strncpy(mess, buff_out, j);
-		    strcpy(name_send, &buff_out[j+1]);
-				send_message(buff_out, name_send);
+		    if (check == 1){
+		    	char mess[BUFFER_SZ];
+		        char name_send[BUFFER_SZ];
+		        strncpy(mess, buff_out, j);
+		        strcpy(name_send, &buff_out[j+1]);
+			    send_message(mess, name_send);
 				str_trim_lf(buff_out, strlen(buff_out));
-				printf("%s -> %s\n", mess, cli->name);
+				printf("From %s -> %s : %s\n", cli->name, name_send, mess);
 				bzero(mess, BUFFER_SZ);
+			}
+			else{
+				printf("From %s -> %s : %s\n", cli->name, "all", buff_out);
+			}
 			}
 		} 
 		else if (receive == 0 || strcmp(buff_out, "exit") == 0){
-			sprintf(buff_out, "%s has offline\n", cli->name);
-			printf("%s", buff_out);
+			//sprintf(buff_out, "%s has offline\n", cli->name);
+			//printf("%s", buff_out);
 			send_message(buff_out, "");
 			leave_flag = 1;
 		} 

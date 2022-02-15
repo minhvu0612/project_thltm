@@ -39,7 +39,7 @@ public class SignupController {
 
 	// Event Listener on Button[#signup_btn].onAction
 	@FXML
-	public void onClickSignup(ActionEvent event) throws SQLException {
+	public void onClickSignup(ActionEvent event) throws SQLException, IOException {
 		users user = null;
 		if (rbtn1.isSelected()) {
 			user = new users(signup_user.getText(), signup_pass.getText(), signup_email.getText(), signup_phone.getText(), "male");
@@ -48,7 +48,13 @@ public class SignupController {
 			user = new users(signup_user.getText(), signup_pass.getText(), signup_email.getText(), signup_phone.getText(), "female");
 		}
 		if (userq.addUser(user) == 1) {
-			new alert().alertSuccess("Success");
+			new alert().alertSuccess("Successfully!");
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+			Parent root = loader.load();
+			HomeController home = loader.getController();
+			home.setUser(user);
+			Stage window = (Stage) signup_btn.getScene().getWindow();
+			window.setScene(new Scene(root));
 		}
 		else {
 			new alert().alertFieldError("Error");
